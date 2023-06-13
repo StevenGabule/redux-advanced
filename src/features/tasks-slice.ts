@@ -17,6 +17,7 @@ const fetchTasks = createAsyncThunk('tasks/fetchTasks', async (): Promise<Task[]
 		.catch(err => console.log(err.message))
 
 	if (!response.ok) return null;
+	
 	return response.tasks
 })
 
